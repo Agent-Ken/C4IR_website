@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+
+html,body{
+    overflow-x: hidden;
+}
+
 /* ------Header section */
 header {
     width: 100%;
@@ -189,13 +194,14 @@ nav ul li a:hover {
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     border-top: 1px solid rgba(230,232,235,.24);
+    overflow: hidden !important;
 }
 
 #about_us .about_us {
     flex-direction: column;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 #about_us .section-title {
@@ -284,6 +290,7 @@ nav ul li a:hover {
     letter-spacing: .2rem;
     display: flex;
     justify-content: center;
+    text-align: center;
     /* align-items: center; */
 }
 
@@ -477,7 +484,9 @@ nav ul li a:hover {
 }
 
 #contact .container {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
     height: 60vh;
 }
 
@@ -496,7 +505,7 @@ footer {
     position: relative;
     padding: 0 5%;
     font-family: "Montserrat", sans-serif;
-    z-index: 10;
+    border-top: 1px solid rgba(230,232,235,.24);
 }
 
 footer p {
@@ -508,10 +517,10 @@ footer p {
 }
 
 footer .foot {
-    border-top: 1px solid rgba(230,232,235,.24);
+    
     /* background-image: linear-gradient(#DEE4EA, #F9FCFF); */
     width: 100%;
-    position: absolute;
+
     top: 0;
     left: 0;
     padding: 20px 8%;
@@ -755,6 +764,10 @@ footer .foot p span {
         font-size: 2.4rem;
     }
 
+    #contact > h2 {
+        margin-bottom: 0;
+    }
+
     #contact .info {
         gap: 40px;
         flex-direction: column;
@@ -771,6 +784,13 @@ footer .foot p span {
 
     footer .foot p {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 750px) {
+    footer .foot {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
@@ -823,11 +843,6 @@ footer .foot p span {
 @media (max-width: 600px) {
     header .main h1 {
         font-size: 50px;
-    }
-
-    footer .foot {
-        flex-direction: column;
-        gap: 10px;
     }
 }
 
@@ -899,4 +914,45 @@ footer .foot p span {
     #articles .row .column .card p {
         font-size: 12px;
     }
-  }
+
+    #about_us .about_us-top .section-title {
+        font-size: 1.6rem;
+    }
+
+    #about_us .about_us-top > p {
+        font-size: 0.8rem;
+    }
+
+    #about_us .about_us-bottom .mission-vision {
+        width: 350px;
+    }
+
+    #about_us .about_us-bottom h2 {
+        font-size: 18px;
+    }
+
+    #about_us .about_us-bottom p {
+        font-size: 0.7rem;
+        padding: 0 20px;
+    }
+
+    #articles .section-heading {
+        font-size: 1.8rem;
+    }
+
+    #articles .row .column .card h3 {
+        font-size: 14px;
+    }
+
+    #articles .row .column .card p {
+        font-size: 11px;
+    }
+
+    #news .news-main {
+        font-size: 1.9rem;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+}
